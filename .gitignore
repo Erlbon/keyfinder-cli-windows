@@ -1,0 +1,7 @@
+# Build tooling/artifacts -- not committed, build.ps1 fetches/builds these
+vcpkg/
+cmake-build/
+dist/
+ffmpeg-shared/
+ffmpeg-full-shared.7z
+ffmpeg-extract-tmp/
