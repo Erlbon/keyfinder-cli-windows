@@ -85,6 +85,14 @@ released the same way. `getopt-win32` is LGPL-3.0. The FFmpeg build
 linked in the release binaries (gyan.dev's default "full" package) is
 GPL-licensed.
 
+[`NOTICE.txt`](NOTICE.txt) breaks that down per binary (keyfinder-cli,
+libkeyfinder, FFmpeg) with source links for each -- the release zip
+bundles both `LICENSE` and `NOTICE.txt` alongside the exe/DLLs so
+anyone redistributing this build downstream (as e.g. mp3redactor does,
+bundling it as an external tool it shells out to -- see that project's
+own README) has everything GPLv3 requires them to carry along with it,
+without having to hunt it down separately.
+
 All credit for the actual key-detection logic goes to
 [Ibrahim Sha'ath](http://www.ibrahimshaath.co.uk/) (original libKeyFinder
 author), the [Mixxx](https://github.com/mixxxdj) project (current
