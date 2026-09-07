@@ -13,10 +13,21 @@ of repeating the build.
 
 ## Download
 
-Grab `keyfinder-cli.exe` + the 4 `.dll` files from the
-[latest release](../../releases/latest) and put them all in the same
-folder (it dynamically links FFmpeg, so the DLLs have to ship alongside
-the exe):
+Grab **`keyfinder-cli-<version>-windows.zip`** from the
+[latest release](../../releases/latest) and extract it -- it bundles
+`keyfinder-cli.exe` with the 4 `.dll` files it dynamically links against
+FFmpeg with, all in one download, so there's no way to end up with the
+exe but not its DLLs.
+
+(The 5 files are also uploaded individually on the same release page,
+for projects that fetch just one or two of them programmatically -- but
+grabbing those by hand one at a time is exactly how you can end up with
+`keyfinder-cli.exe` sitting alone, no DLLs, which fails at launch with
+a "The code execution cannot proceed because avformat-*.dll was not
+found" system error. Use the zip unless you have a specific reason not
+to.)
+
+Either way, all 5 files need to end up in the same folder:
 
 - `keyfinder-cli.exe`
 - `avformat-*.dll`, `avcodec-*.dll`, `avutil-*.dll`, `swresample-*.dll`
